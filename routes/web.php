@@ -29,6 +29,10 @@ Route::get('/about', function () {
     return view('pages.about');
 });
 
+Route::get('/blog', function () {
+    return view('pages.blog');
+});
+
 Route::get('/privacy', function () {
     return view('pages.privacy');
 });
