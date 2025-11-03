@@ -1,4 +1,4 @@
-<section id="services" class="py-20 bg-white">
+<section id="services" class="pt-32 pb-20 bg-white">
     <div class="container mx-auto px-6 flex flex-col items-center text-center space-y-6">
         <h2 class="text-4xl sm:text-5xl font-semibold max-w-3xl">
             Get more out of your personal and professional life.

@@ -31,11 +31,10 @@
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex items-center space-x-6 text-gray-700">
-      <a href="https://movetobemore.com/#about" class="hover:text-blue-600 transition">About</a>
-      <a href="https://movetobemore.com/services/" class="hover:text-blue-600 transition">Services</a>
-      <a href="https://movetobemore.com/#reviews" class="hover:text-blue-600 transition">Reviews</a>
-      <a href="https://movetobemore.com/blog/" class="hover:text-blue-600 transition">Blog</a>
-      <a href="#contact" class="px-4 py-2 border border-gray-700 rounded hover:bg-gray-700 hover:text-white transition">Contact</a>
+      <a href="/about" class="hover:text-blue-600 transition">About Us</a>
+      <a href="/blog" class="hover:text-blue-600 transition">Blog</a>
+      <a href="/contact" class="px-4 py-2 border border-gray-700 rounded hover:bg-gray-700 hover:text-white transition">Contact Us</a>
+      <a href="/privacy" class="hover:text-blue-600 transition">Privacy</a>
     </nav>
 
     <!-- Mobile Menu Button -->
@@ -49,11 +48,10 @@
   <!-- Mobile Menu -->
   <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
     <ul class="flex flex-col space-y-3 p-4 text-gray-700">
-      <li><a href="https://movetobemore.com/#about" class="hover:text-blue-600">About</a></li>
-      <li><a href="https://movetobemore.com/services/" class="hover:text-blue-600">Services</a></li>
-      <li><a href="https://movetobemore.com/#reviews" class="hover:text-blue-600">Reviews</a></li>
-      <li><a href="https://movetobemore.com/blog/" class="hover:text-blue-600">Blog</a></li>
-      <li><a href="#contact" class="px-4 py-2 border border-gray-700 rounded hover:bg-gray-700 hover:text-white transition">Contact</a></li>
+      <li><a href="/about" class="hover:text-blue-600">About Us</a></li>
+      <li><a href="/blog" class="hover:text-blue-600">Blog</a></li>
+      <li><a href="/contact" class="px-4 py-2 border border-gray-700 rounded hover:bg-gray-700 hover:text-white transition">Contact Us</a></li>
+      <li><a href="/privacy" class="hover:text-blue-600">Privacy</a></li>
     </ul>
   </nav>
 </header>

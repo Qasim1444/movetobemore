@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Swiper Test</title>
-
-    <!-- Tailwind (for your classes) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Swiper CSS -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-</head>
-<body>
-
 <section id="reviews" class="bg-[#f9f5ef] py-16">
     <div class="container mx-auto px-6 text-center">
         <h3 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-10">
@@ -28,7 +10,7 @@
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
                     <div class="swiper-slide flex flex-col items-center text-center px-6">
-                        <p class="text-gray-700 text-lg mb-6 italic">
+                        <p  class="text-gray-700 text-lg mb-6 italic">
                             "My journey with Sherell is something I would hold near my heart forever."
                         </p>
                         <img
@@ -79,36 +61,27 @@
         </div>
     </div>
 </section>
-
-<!-- Swiper JS (must load BEFORE init script) -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper AFTER library loads -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
+        // Only initialize if Swiper is available and the container exists
+        if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper')) {
+            new Swiper('.mySwiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
                 },
-                1024: {
-                    slidesPerView: 3,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
-            },
-        });
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                },
+            });
+        }
     });
-</script>
-
-</body>
-</html>
+    </script>

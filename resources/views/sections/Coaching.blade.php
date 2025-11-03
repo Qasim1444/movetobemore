@@ -1,4 +1,4 @@
-<section id="about" class="py-20 bg-white relative overflow-hidden">
+<section id="about" class="pt-20 pb-64 bg-white relative overflow-hidden">
     <div class="container mx-auto px-6">
         <!-- Heading -->
         <h2 class="text-4xl sm:text-5xl font-semibold mb-12">

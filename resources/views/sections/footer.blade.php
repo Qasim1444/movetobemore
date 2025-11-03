@@ -1,4 +1,4 @@
-<section class="py-4 font-[Optima,sans-serif] font-normal text-[18px] leading-[23px]">
+<section class="py-4 font-['Arsenal',sans-serif] font-normal text-[18px] leading-[23px]">
     <div class="container mx-auto">
         <!-- Row -->
         <div class="grid grid-cols-12 items-center gap-4">
