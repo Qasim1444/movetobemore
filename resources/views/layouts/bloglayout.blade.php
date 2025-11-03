@@ -62,7 +62,6 @@
     <main>
       
      @yield('content')
-     @include('pages.blogcard')
      @include('sections.Letschat')
         @include('sections.footer')
     </main>

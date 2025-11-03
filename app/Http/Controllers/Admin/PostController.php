@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -34,7 +35,15 @@ class PostController extends Controller
             $data['image'] = $request->file('image')->store('posts', 'public');
         }
 
-        Post::create($data);
+        // Ensure slug is set
+        $data['slug'] = Post::query()->make(['title' => $data['title']])->slug ?? Str::slug($data['title']);
+
+        // Guarantee uniqueness via model generator as fallback
+        $post = new Post($data);
+        if (empty($post->slug)) {
+            $post->slug = Str::slug($post->title);
+        }
+        $post->save();
 
 		return redirect()->route('admin.posts.index')->with('success', 'Post created successfully.');
 	}
@@ -62,6 +71,7 @@ class PostController extends Controller
             $data['image'] = $request->file('image')->store('posts', 'public');
         }
 
+        // If title changed, slug will be refreshed by model boot() updater
         $post->update($data);
 
 		return redirect()->route('admin.posts.index')->with('success', 'Post updated successfully.');

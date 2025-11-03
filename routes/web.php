@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PostController as AdminPostController;
+use App\Models\Post;
 
 Route::prefix('admin')->name('admin.')->group(function () {
 	// Optionally add middleware like ->middleware('auth')
@@ -53,8 +54,14 @@ Route::get('/about', function () {
 });
 
 Route::get('/blog', function () {
-    return view('pages.blog');
+	$posts = Post::latest()->paginate(9);
+	return view('pages.blogcard', compact('posts'));
 });
+
+// Public blog post show route by slug only: /blog/{slug}
+Route::get('/blog/{post:slug}', function (Post $post) {
+    return view('pages.post', compact('post'));
+})->name('blog.show');
 
 Route::get('/privacy', function () {
     return view('pages.privacy');
